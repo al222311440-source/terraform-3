@@ -1,0 +1,27 @@
+azurerm_log_analytics_workspace.qa: Creating...
+azurerm_log_analytics_workspace.qa: Still creating... [00m10s elapsed]
+azurerm_log_analytics_workspace.qa: Still creating... [00m20s elapsed]
+azurerm_log_analytics_workspace.qa: Still creating... [00m30s elapsed]
+azurerm_log_analytics_workspace.qa: Still creating... [00m40s elapsed]
+azurerm_log_analytics_workspace.qa: Still creating... [00m50s elapsed]
+azurerm_log_analytics_workspace.qa: Creation complete after 51s [id=/subscriptions/[SUBSCRIPTION_ID_OCULTO]/resourceGroups/rg-utvt-integradora-web-qa-mxc-001/providers/Microsoft.OperationalInsights/workspaces/log-utvt-integradora-web-qa-mxc-001]
+azurerm_application_insights.qa: Creating...
+azurerm_application_insights.qa: Creation complete after 9s [id=/subscriptions/[SUBSCRIPTION_ID_OCULTO]/resourceGroups/rg-utvt-integradora-web-qa-mxc-001/providers/Microsoft.Insights/components/appi-utvt-integradora-web-qa-mxc-001]
+azurerm_linux_web_app.qa: Creating...
+azurerm_linux_web_app.qa: Still creating... [00m10s elapsed]
+azurerm_linux_web_app.qa: Still creating... [00m20s elapsed]
+azurerm_linux_web_app.qa: Still creating... [00m30s elapsed]
+azurerm_linux_web_app.qa: Still creating... [00m40s elapsed]
+azurerm_linux_web_app.qa: Still creating... [00m50s elapsed]
+azurerm_linux_web_app.qa: Creation complete after 59s [id=/subscriptions/[SUBSCRIPTION_ID_OCULTO]/resourceGroups/rg-utvt-integradora-web-qa-mxc-001/providers/Microsoft.Web/sites/app-utvt-integradora-web-qa-mxc-al222311440-001]
+
+Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+application_insights_name = "appi-utvt-integradora-web-qa-mxc-001"
+log_analytics_name = "log-utvt-integradora-web-qa-mxc-001"
+resource_group_name = "rg-utvt-integradora-web-qa-mxc-001"
+service_plan_name = "asp-utvt-integradora-web-qa-mxc-001"
+web_app_name = "app-utvt-integradora-web-qa-mxc-al222311440-001"
+web_app_url = "https://app-utvt-integradora-web-qa-mxc-al222311440-001.azurewebsites.net"

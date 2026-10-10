@@ -1,0 +1,27 @@
+azurerm_resource_group.qa: Creating...
+azurerm_resource_group.qa: Still creating... [00m10s elapsed]
+azurerm_resource_group.qa: Still creating... [00m20s elapsed]
+azurerm_resource_group.qa: Creation complete after 28s [id=/subscriptions/[SUBSCRIPTION_ID_OCULTO]/resourceGroups/rg-utvt-integradora-web-qa-mxc-001]
+azurerm_service_plan.qa: Creating...
+azurerm_service_plan.qa: Still creating... [00m10s elapsed]
+azurerm_service_plan.qa: Creation complete after 17s [id=/subscriptions/[SUBSCRIPTION_ID_OCULTO]/resourceGroups/rg-utvt-integradora-web-qa-mxc-001/providers/Microsoft.Web/serverFarms/asp-utvt-integradora-web-qa-mxc-001]
+
+Warning: Applied changes may be incomplete
+
+The plan was created with the -target option in effect, so some changes
+requested in the configuration may have been ignored and the output values
+may not be fully updated. Run the following command to verify that no other
+changes are pending:
+    terraform plan
+
+Note that the -target option is not suitable for routine use, and is provided
+only for exceptional situations such as recovering from errors or mistakes,
+or when Terraform specifically suggests to use it as part of an error
+message.
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+resource_group_name = "rg-utvt-integradora-web-qa-mxc-001"
+service_plan_name = "asp-utvt-integradora-web-qa-mxc-001"

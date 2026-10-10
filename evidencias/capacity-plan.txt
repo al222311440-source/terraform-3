@@ -1,0 +1,68 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_resource_group.qa will be created
+  + resource "azurerm_resource_group" "qa" {
+      + id       = (known after apply)
+      + location = "mexicocentral"
+      + name     = "rg-utvt-integradora-web-qa-mxc-001"
+      + tags     = {
+          + "environment"  = "qa"
+          + "managed_by"   = "terraform"
+          + "organization" = "utvt"
+          + "owner"        = "Felipe de Jesús Serrano Hurtado"
+          + "practice"     = "terraform-3"
+          + "project"      = "integradora"
+          + "workload"     = "web"
+        }
+    }
+
+  # azurerm_service_plan.qa will be created
+  + resource "azurerm_service_plan" "qa" {
+      + id                              = (known after apply)
+      + kind                            = (known after apply)
+      + location                        = "mexicocentral"
+      + maximum_elastic_worker_count    = (known after apply)
+      + name                            = "asp-utvt-integradora-web-qa-mxc-001"
+      + os_type                         = "Linux"
+      + per_site_scaling_enabled        = false
+      + premium_plan_auto_scale_enabled = false
+      + reserved                        = (known after apply)
+      + resource_group_name             = "rg-utvt-integradora-web-qa-mxc-001"
+      + sku_name                        = "F1"
+      + tags                            = {
+          + "environment"  = "qa"
+          + "managed_by"   = "terraform"
+          + "organization" = "utvt"
+          + "owner"        = "Felipe de Jesús Serrano Hurtado"
+          + "practice"     = "terraform-3"
+          + "project"      = "integradora"
+          + "workload"     = "web"
+        }
+      + worker_count                    = (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + resource_group_name = "rg-utvt-integradora-web-qa-mxc-001"
+  + service_plan_name   = "asp-utvt-integradora-web-qa-mxc-001"
+
+Warning: Resource targeting is in effect
+
+You are creating a plan with the -target option, which means that the result of this plan may not represent all of the changes requested
+by the current configuration.
+
+The -target option is not for routine use, and is provided only for exceptional situations such as recovering from errors or mistakes, or
+when Terraform specifically suggests to use it as part of an error message.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: capacity.tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "capacity.tfplan"

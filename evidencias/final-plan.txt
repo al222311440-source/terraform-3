@@ -1,0 +1,10 @@
+azurerm_resource_group.qa: Refreshing state... [id=/subscriptions/[SUBSCRIPTION_ID_OCULTO]/resourceGroups/rg-utvt-integradora-web-qa-mxc-001]
+azurerm_service_plan.qa: Refreshing state... [id=/subscriptions/[SUBSCRIPTION_ID_OCULTO]/resourceGroups/rg-utvt-integradora-web-qa-mxc-001/providers/Microsoft.Web/serverFarms/asp-utvt-integradora-web-qa-mxc-001]
+azurerm_log_analytics_workspace.qa: Refreshing state... [id=/subscriptions/[SUBSCRIPTION_ID_OCULTO]/resourceGroups/rg-utvt-integradora-web-qa-mxc-001/providers/Microsoft.OperationalInsights/workspaces/log-utvt-integradora-web-qa-mxc-001]
+azurerm_application_insights.qa: Refreshing state... [id=/subscriptions/[SUBSCRIPTION_ID_OCULTO]/resourceGroups/rg-utvt-integradora-web-qa-mxc-001/providers/Microsoft.Insights/components/appi-utvt-integradora-web-qa-mxc-001]
+azurerm_linux_web_app.qa: Refreshing state... [id=/subscriptions/[SUBSCRIPTION_ID_OCULTO]/resourceGroups/rg-utvt-integradora-web-qa-mxc-001/providers/Microsoft.Web/sites/app-utvt-integradora-web-qa-mxc-al222311440-001]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.

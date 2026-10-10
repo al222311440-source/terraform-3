@@ -36,4 +36,12 @@ F1 es gratuito. Log Analytics y Application Insights pueden facturar ingesta; su
 
 ## Estado de ejecución
 
-Configuración preparada. La validación y el despliegue se documentarán después de observar sus resultados reales.
+Despliegue completado en Azure Cloud Shell Bash: Terraform 1.16.0, Azure CLI 2.90.0 y AzureRM 5.9.0. fmt e init correctos; validate válido; plan inicial de 5 altas. El nombre global estaba disponible.
+
+La cuota Total Regional VMs informó límite cero. Se aplicó excepcionalmente un plan dirigido a service_plan y su grupo para comprobar F1 antes de crear monitoreo. El resultado real fue 2 altas correctas. Después se generó y aplicó un plan completo sin -target: 3 altas, sin cambios ni eliminaciones. No se utilizó el plan inicial después de cambiar el estado.
+
+Azure confirmó los cinco recursos, Linux F1/Free, Workspace PerGB2018, retención 30 días y ambos topes diarios 0.1 GB. Se comprobaron HTTPS obligatorio, NODE|24-lts, TLS 1.2, FTPS Disabled y alwaysOn=false. La conexión de Insights coincide con la configuración de Web App y el componente apunta al Workspace correcto. El agente está configurado en ~3. No se publicaron valores de conexión ni claves.
+
+La Web App respondió HTTP 200 con la página inicial de Azure App Service, esperando contenido. No se desplegó código de aplicación ni se afirmó ingesta real de telemetría Node.
+
+El plan final completo mostró No changes. Your infrastructure matches the configuration., con código de salida 0. Los registros originales y el estado real se conservaron en un respaldo privado. Las evidencias de este repositorio ocultan el identificador de suscripción y la cuenta institucional. Los archivos de Terraform coinciden con los aplicados.

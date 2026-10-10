@@ -1,0 +1,192 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_application_insights.qa will be created
+  + resource "azurerm_application_insights" "qa" {
+      + app_id                               = (known after apply)
+      + application_type                     = "web"
+      + connection_string                    = (sensitive value)
+      + daily_data_cap_in_gb                 = 0.1
+      + daily_data_cap_notifications_enabled = true
+      + force_customer_storage_for_profiler  = false
+      + id                                   = (known after apply)
+      + instrumentation_key                  = (sensitive value)
+      + internet_ingestion_enabled           = true
+      + internet_query_enabled               = true
+      + ip_masking_enabled                   = true
+      + local_authentication_enabled         = true
+      + location                             = "mexicocentral"
+      + name                                 = "appi-utvt-integradora-web-qa-mxc-001"
+      + resource_group_name                  = "rg-utvt-integradora-web-qa-mxc-001"
+      + retention_in_days                    = 90
+      + sampling_percentage                  = 100
+      + tags                                 = {
+          + "environment"  = "qa"
+          + "managed_by"   = "terraform"
+          + "organization" = "utvt"
+          + "owner"        = "Felipe de Jesús Serrano Hurtado"
+          + "practice"     = "terraform-3"
+          + "project"      = "integradora"
+          + "workload"     = "web"
+        }
+      + workspace_id                         = (known after apply)
+    }
+
+  # azurerm_linux_web_app.qa will be created
+  + resource "azurerm_linux_web_app" "qa" {
+      + app_settings                                   = (known after apply)
+      + client_affinity_enabled                        = false
+      + client_certificate_enabled                     = false
+      + client_certificate_mode                        = "Required"
+      + custom_domain_verification_id                  = (sensitive value)
+      + default_hostname                               = (known after apply)
+      + enabled                                        = true
+      + end_to_end_tls_encryption_enabled              = false
+      + ftp_publish_basic_authentication_enabled       = true
+      + hosting_environment_id                         = (known after apply)
+      + https_only                                     = true
+      + id                                             = (known after apply)
+      + key_vault_reference_identity_id                = (known after apply)
+      + kind                                           = (known after apply)
+      + location                                       = "mexicocentral"
+      + name                                           = "app-utvt-integradora-web-qa-mxc-al222311440-001"
+      + outbound_ip_address_list                       = (known after apply)
+      + outbound_ip_addresses                          = (known after apply)
+      + possible_outbound_ip_address_list              = (known after apply)
+      + possible_outbound_ip_addresses                 = (known after apply)
+      + public_network_access_enabled                  = true
+      + resource_group_name                            = "rg-utvt-integradora-web-qa-mxc-001"
+      + service_plan_id                                = (known after apply)
+      + site_credential                                = (sensitive value)
+      + tags                                           = {
+          + "environment"  = "qa"
+          + "managed_by"   = "terraform"
+          + "organization" = "utvt"
+          + "owner"        = "Felipe de Jesús Serrano Hurtado"
+          + "practice"     = "terraform-3"
+          + "project"      = "integradora"
+          + "workload"     = "web"
+        }
+      + virtual_network_backup_restore_enabled         = false
+      + vnet_image_pull_enabled                        = false
+      + webdeploy_publish_basic_authentication_enabled = true
+      + zip_deploy_file                                = (known after apply)
+
+      + site_config {
+          + always_on                               = false
+          + container_registry_use_managed_identity = false
+          + default_documents                       = (known after apply)
+          + detailed_error_logging_enabled          = (known after apply)
+          + ftps_state                              = "Disabled"
+          + http2_enabled                           = false
+          + ip_restriction_default_action           = "Allow"
+          + linux_fx_version                        = (known after apply)
+          + load_balancing_mode                     = "LeastRequests"
+          + local_mysql_enabled                     = false
+          + managed_pipeline_mode                   = "Integrated"
+          + minimum_tls_version                     = "1.2"
+          + remote_debugging_enabled                = false
+          + remote_debugging_version                = (known after apply)
+          + scm_ip_restriction_default_action       = "Allow"
+          + scm_minimum_tls_version                 = "1.2"
+          + scm_type                                = (known after apply)
+          + scm_use_main_ip_restriction             = false
+          + use_32_bit_worker                       = true
+          + vnet_route_all_enabled                  = false
+          + websockets_enabled                      = false
+          + worker_count                            = (known after apply)
+
+          + application_stack {
+              + node_version = "24-lts"
+            }
+        }
+    }
+
+  # azurerm_log_analytics_workspace.qa will be created
+  + resource "azurerm_log_analytics_workspace" "qa" {
+      + allow_resource_only_permissions = true
+      + daily_quota_gb                  = 0.1
+      + id                              = (known after apply)
+      + internet_ingestion_access_type  = "Enabled"
+      + internet_query_access_type      = "Enabled"
+      + local_authentication_enabled    = true
+      + location                        = "mexicocentral"
+      + name                            = "log-utvt-integradora-web-qa-mxc-001"
+      + primary_shared_key              = (sensitive value)
+      + resource_group_name             = "rg-utvt-integradora-web-qa-mxc-001"
+      + retention_in_days               = 30
+      + secondary_shared_key            = (sensitive value)
+      + sku                             = "PerGB2018"
+      + tags                            = {
+          + "environment"  = "qa"
+          + "managed_by"   = "terraform"
+          + "organization" = "utvt"
+          + "owner"        = "Felipe de Jesús Serrano Hurtado"
+          + "practice"     = "terraform-3"
+          + "project"      = "integradora"
+          + "workload"     = "web"
+        }
+      + workspace_id                    = (known after apply)
+    }
+
+  # azurerm_resource_group.qa will be created
+  + resource "azurerm_resource_group" "qa" {
+      + id       = (known after apply)
+      + location = "mexicocentral"
+      + name     = "rg-utvt-integradora-web-qa-mxc-001"
+      + tags     = {
+          + "environment"  = "qa"
+          + "managed_by"   = "terraform"
+          + "organization" = "utvt"
+          + "owner"        = "Felipe de Jesús Serrano Hurtado"
+          + "practice"     = "terraform-3"
+          + "project"      = "integradora"
+          + "workload"     = "web"
+        }
+    }
+
+  # azurerm_service_plan.qa will be created
+  + resource "azurerm_service_plan" "qa" {
+      + id                              = (known after apply)
+      + kind                            = (known after apply)
+      + location                        = "mexicocentral"
+      + maximum_elastic_worker_count    = (known after apply)
+      + name                            = "asp-utvt-integradora-web-qa-mxc-001"
+      + os_type                         = "Linux"
+      + per_site_scaling_enabled        = false
+      + premium_plan_auto_scale_enabled = false
+      + reserved                        = (known after apply)
+      + resource_group_name             = "rg-utvt-integradora-web-qa-mxc-001"
+      + sku_name                        = "F1"
+      + tags                            = {
+          + "environment"  = "qa"
+          + "managed_by"   = "terraform"
+          + "organization" = "utvt"
+          + "owner"        = "Felipe de Jesús Serrano Hurtado"
+          + "practice"     = "terraform-3"
+          + "project"      = "integradora"
+          + "workload"     = "web"
+        }
+      + worker_count                    = (known after apply)
+    }
+
+Plan: 5 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + application_insights_name = "appi-utvt-integradora-web-qa-mxc-001"
+  + log_analytics_name        = "log-utvt-integradora-web-qa-mxc-001"
+  + resource_group_name       = "rg-utvt-integradora-web-qa-mxc-001"
+  + service_plan_name         = "asp-utvt-integradora-web-qa-mxc-001"
+  + web_app_name              = "app-utvt-integradora-web-qa-mxc-al222311440-001"
+  + web_app_url               = (known after apply)
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: practice.tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "practice.tfplan"
